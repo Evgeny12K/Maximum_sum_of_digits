@@ -25,4 +25,4 @@ jobs:
 
     - name: Run the script
       run: |
-        echo -e "15\n29\n8\n0" | sum_of_digits.py
+        echo -e "15\n29\n8\n0" | python sum_of_digits.py
