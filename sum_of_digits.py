@@ -1,23 +1,13 @@
 def sum_of_digits(number):
-    """Возвращает сумму цифр числа."""
     return sum(int(digit) for digit in str(abs(number)))
 
-def main():
+def main(numbers):
     max_number = None
     max_digit_sum = 0
 
-    print("Введите целые числа (введите 0 для завершения):")
+    print("Вводимые целые числа:")
 
-    while True:
-        try:
-            number = int(input())
-        except ValueError:
-            print("Пожалуйста, введите целое число.")
-            continue
-
-        if number == 0:
-            break
-
+    for number in numbers:
         digit_sum = sum_of_digits(number)
         if digit_sum > max_digit_sum:
             max_digit_sum = digit_sum
@@ -29,4 +19,4 @@ def main():
         print("Ни одно число не было введено.")
 
 if __name__ == "__main__":
-    main()
+    main([15, 29, 8, 0])
